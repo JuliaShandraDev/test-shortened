@@ -11,10 +11,10 @@ export class DataService {
   }
 
   getShorterURL({linkUrl}: { linkUrl: string }): Observable<{ linkHash: string }> {
-    return this.http.get<{ linkHash: string }>("https://url-shortened-back.herokuapp.com/generateLink", {params: {link: linkUrl}});
+    return this.http.get<{ linkHash: string }>("https://url-shortened-back.herokuapp.com/api/generateLink", {params: {link: linkUrl}});
   }
 
   getOriginalURL(hash: string): Observable<{ link: string }> {
-    return this.http.get<{ link: string }>("https://url-shortened-back.herokuapp.com/redirectLink", {params: {hash}})
+    return this.http.get<{ link: string }>("https://url-shortened-back.herokuapp.com/api/redirectLink", {params: {hash}})
   };
 }
