@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {DataService} from "../../../../services/data/data.service";
-=======
-import { Component, OnInit } from '@angular/core';
->>>>>>> c74fbed1f9440c693c58fa2762ef3c54cfc6739b
+
 
 @Component({
   selector: 'app-redirect-confirmation',
@@ -13,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./redirect-confirmation.component.scss']
 })
 export class RedirectConfirmationComponent implements OnInit {
-<<<<<<< HEAD
   public isLoading = true;
 
   constructor(
@@ -45,12 +41,4 @@ export class RedirectConfirmationComponent implements OnInit {
   errorHandler(error: Error): void {
     this.isLoading = false;
   }
-=======
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
->>>>>>> c74fbed1f9440c693c58fa2762ef3c54cfc6739b
 }

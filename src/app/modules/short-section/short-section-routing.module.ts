@@ -19,15 +19,9 @@ const routes: Routes = [
         component: ShorterFormComponent
       },
       {
-<<<<<<< HEAD
         path: 'link/:id',
         component: RedirectConfirmationComponent
-      },
-=======
-        path: ':id',
-        component: RedirectConfirmationComponent
       }
->>>>>>> c74fbed1f9440c693c58fa2762ef3c54cfc6739b
     ]
   }
 ];
