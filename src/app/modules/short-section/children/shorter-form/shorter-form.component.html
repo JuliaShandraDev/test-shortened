@@ -1,0 +1,11 @@
+<div class="col centered wrapper">
+  <h1 class="row centered">URL Shortener</h1>
+  <div class="col centered box" [formGroup]="linkForm">
+    <input formControlName="linkUrl" type="text" placeholder="Paste your URL address">
+    <button *ngIf="!isLoading"
+            (click)="isResetInput ? resetForm() : viewResult()">{{ isResetInput ? 'Reset field' : 'Generate URL' }}</button>
+    <app-loader *ngIf="isLoading"></app-loader>
+  </div>
+</div>
+
+<div *ngIf="sorterURL" (click)="copyLink()" class="shorter-url">{{ sorterURL }}</div>
