@@ -11,11 +11,10 @@ export class DataService {
   }
 
   getShorterURL({linkUrl}: { linkUrl: string }): Observable<{ linkHash: string }> {
-    return this.http.get<{ linkHash: string }>('http://localhost:3000/api/generateLink', {params: {link: linkUrl}});
+    return this.http.get<{ linkHash: string }>(process.env.API_BASE_URL + '/generateLink', {params: {link: linkUrl}});
   }
 
   getOriginalURL(hash: string): Observable<{ link: string }> {
-    return this.http.get<{ link: string }>('http://localhost:3000/api/redirectLink', {params: {hash}});
-
-  }
+    return this.http.get<{ link: string }>(process.env.API_BASE_URL + "/redirectLink", {params: {hash}})
+  };
 }
